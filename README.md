@@ -136,3 +136,9 @@ Prices are polled every **30 minutes**. Fuel prices rarely change more frequentl
 
 - [Pumperly](https://github.com/GeiserX/Pumperly) - The open-source fuel & EV route planner
 - [pumperly.com](https://pumperly.com) - Public Pumperly instance
+
+## Other Home Assistant Integrations by GeiserX
+
+- [cashpilot-ha](https://github.com/GeiserX/cashpilot-ha) — Passive income earnings sensors
+- [duplicacy-ha](https://github.com/GeiserX/duplicacy-ha) — Backup status monitoring
+- [genieacs-ha](https://github.com/GeiserX/genieacs-ha) — TR-069 router management sensors
