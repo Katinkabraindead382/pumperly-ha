@@ -9,6 +9,8 @@
 [![codecov](https://codecov.io/gh/GeiserX/pumperly-ha/graph/badge.svg)](https://codecov.io/gh/GeiserX/pumperly-ha)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![listed on awesome-spain](https://img.shields.io/badge/listed%20on-awesome--spain-c60b1e?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDIwIDE0Ij48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIGZpbGw9IiNjNjBiMWUiLz48cmVjdCB5PSIzLjUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI3IiBmaWxsPSIjZmZjNDAwIi8+PC9zdmc+&labelColor=ffc400)](https://github.com/GeiserX/awesome-spain#readme)
+[![listed on awesome-europe](https://img.shields.io/badge/listed%20on-awesome--europe-ffcc00?style=flat-square&logo=europeanunion&logoColor=ffcc00&labelColor=003399)](https://github.com/GeiserX/awesome-europe#readme)
 
 A Home Assistant custom integration that tracks **fuel and EV charging prices** from a [Pumperly](https://github.com/GeiserX/Pumperly) instance. Get real-time price data for 16 fuel types across 36 countries, directly in your smart home dashboard.
 
